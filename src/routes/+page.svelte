@@ -189,6 +189,6 @@
   a {
     @apply px-4 text-2xl text-amber-400;
     @apply hover:bg-amber-400 hover:text-stone-800;
-    @apply rounded-full ring-2 ring-amber-400;
+    @apply rounded ring-2 ring-amber-400;
   }
 </style>
