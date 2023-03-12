@@ -10,20 +10,20 @@
   } from '$lib'
 
   interface $$Props extends Omit<Zdog.IllustrationOptions, 'element'> {
-    /** Render to SVG or canvas */
-    element?: 'svg' | 'canvas'
-    /** Update loop subscription */
-    update?: Subscriber<Zdog.Anchor>
     /** Illustration width */
     width: number
     /** Illustration height */
     height: number
+    /** Render to SVG or canvas */
+    element?: 'svg' | 'canvas'
+    /** Update loop subscription */
+    update?: Subscriber<Zdog.Anchor>
   }
 
-  export let element: 'svg' | 'canvas' = 'canvas'
-  export let update: Subscriber<Zdog.Anchor> | undefined = undefined
   export let width: number
   export let height: number
+  export let element: 'svg' | 'canvas' = 'canvas'
+  export let update: Subscriber<Zdog.Anchor> | undefined = undefined
 
   let canvas: SVGSVGElement | HTMLCanvasElement
   const ctx: ZdogContext = {
@@ -43,6 +43,27 @@
       ...$$restProps,
       element: canvas,
     })
+
+    if ($$restProps.onResize) {
+      illu.onResize = $$restProps.onResize.bind(illu)
+    }
+
+    if ($$restProps.onPrerender) {
+      illu.onPrerender = $$restProps.onPrerender?.bind(illu)
+    }
+
+    if ($$restProps.onDragStart) {
+      illu.onDragStart = $$restProps.onDragStart?.bind(illu)
+    }
+
+    if ($$restProps.onDragMove) {
+      illu.onDragMove = $$restProps.onDragMove?.bind(illu)
+    }
+
+    if ($$restProps.onDragEnd) {
+      illu.onDragEnd = $$restProps.onDragEnd?.bind(illu)
+    }
+
     illu.addChild(ctx.scene)
     illu.updateGraph()
 

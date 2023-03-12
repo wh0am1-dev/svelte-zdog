@@ -106,7 +106,7 @@ export const mount = <P extends Primitive>(
   const scene = getScene()
   const parent = getParent()
   const { update, ...rest } = options
-  const node = new primitive(rest as PrimitiveProps<P>)
+  const node = new primitive(rest as PrimitiveOptions<P>)
 
   setParent(node)
   if (update) subscribe(update(node))

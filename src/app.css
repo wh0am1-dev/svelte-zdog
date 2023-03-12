@@ -10,4 +10,24 @@
   ::selection {
     @apply bg-amber-400 text-stone-900;
   }
+
+  h1 {
+    @apply my-8 text-6xl font-bold;
+  }
+
+  h2 {
+    @apply my-4 text-4xl font-bold;
+  }
+
+  p {
+    @apply my-2 text-base;
+  }
+
+  a {
+    @apply px-1 text-amber-400 transition hover:bg-amber-400 hover:text-stone-800;
+  }
+
+  a:has(> img) {
+    @apply p-0 hover:bg-transparent;
+  }
 }
