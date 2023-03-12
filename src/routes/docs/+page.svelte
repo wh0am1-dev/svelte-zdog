@@ -9,7 +9,7 @@
   const armSize = 6
 </script>
 
-<main>
+<main id="top">
   <!-- guy -->
   <Illustration
     element="svg"
@@ -164,31 +164,77 @@
     <!-- /hips -->
   </Illustration>
 
-  <h1>
-    <small>made with</small>
-    svelte-zdog
-  </h1>
+  <!-- <img alt="svelte-zdog" src="/img/header-alpha.png" /> -->
+  <h1>svelte-zdog</h1>
+  <a href="https://npm.im/svelte-zdog">
+    <img
+      alt="npm"
+      src="https://img.shields.io/badge/npm-svelte--zdog-222?style=flat-square&logo=npm"
+    />
+  </a>
+  <p>svelte components for <a href="https://zzz.dog">zdog</a> 3D renders</p>
 
-  <a href="/docs">docs</a>
+  <h2 id="components">components</h2>
+  <section>
+    <ul>
+      <li>
+        <a href="https://zzz.dog/api#illustration">Illustration</a>
+      </li>
+      <li><a href="https://zzz.dog/api#anchor">Anchor</a></li>
+      <li><a href="https://zzz.dog/shapes#box">Box</a></li>
+      <li><a href="https://zzz.dog/shapes#cone">Cone</a></li>
+      <li><a href="https://zzz.dog/shapes#cylinder">Cylinder</a></li>
+      <li><a href="https://zzz.dog/shapes#ellipse">Ellipse</a></li>
+      <li><a href="https://zzz.dog/api#group">Group</a></li>
+      <li><a href="https://zzz.dog/shapes#hemisphere">Hemisphere</a></li>
+      <li><a href="https://zzz.dog/shapes#polygon">Polygon</a></li>
+      <li><a href="https://zzz.dog/shapes#rect">Rect</a></li>
+      <li><a href="https://zzz.dog/shapes#roundedrect">RoundedRect</a></li>
+      <li><a href="https://zzz.dog/shapes#shape">Shape</a></li>
+    </ul>
+  </section>
+
+  <h2 id="utils">utils</h2>
+  <section>
+    <ul>
+      <li><a href="https://zzz.dog/api">Zdog</a></li>
+      <li><a href="https://zzz.dog/api#utilities-tau">TAU</a></li>
+      <li><a href="https://zzz.dog/api#vector">Vector</a></li>
+      <li><a href="https://zzz.dog/api#utilities-easeinout">easeInOut</a></li>
+      <li><a href="https://zzz.dog/api#utilities-extend">extend</a></li>
+      <li><a href="https://zzz.dog/api#utilities-lerp">lerp</a></li>
+      <li><a href="https://zzz.dog/api#utilities-modulo">modulo</a></li>
+    </ul>
+  </section>
 </main>
 
 <style lang="postcss">
   main {
-    @apply min-h-screen w-full overflow-hidden;
+    @apply w-full overflow-x-hidden py-8;
     @apply flex flex-col items-center justify-center;
   }
 
-  h1 {
-    @apply relative my-8 text-6xl font-bold;
+  section {
+    @apply w-80;
   }
 
-  small {
-    @apply absolute text-sm text-amber-400;
+  h1 {
+    @apply my-8 text-7xl font-bold;
+  }
+
+  h2 {
+    @apply mt-12 mb-4 text-4xl font-bold;
+  }
+
+  p {
+    @apply my-4 text-base;
   }
 
   a {
-    @apply px-4 text-2xl text-amber-400;
-    @apply hover:bg-amber-400 hover:text-stone-800;
-    @apply rounded-full ring-2 ring-amber-400;
+    @apply text-amber-400 hover:bg-amber-400 hover:text-stone-800;
+  }
+
+  li {
+    @apply list-disc;
   }
 </style>

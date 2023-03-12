@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-stone-900 text-stone-100;
+  }
+
+  ::selection {
+    @apply bg-amber-400 text-stone-900;
+  }
+}
