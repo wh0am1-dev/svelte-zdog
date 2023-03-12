@@ -211,7 +211,7 @@
     </div>
   </section>
 
-  <h3><small>by</small> <a href={base}>carlos-aguilar.com</a></h3>
+  <h3><small>by</small> <a href="https://carlos-aguilar.com">carlos-aguilar.com</a></h3>
 </main>
 
 <style lang="postcss">
