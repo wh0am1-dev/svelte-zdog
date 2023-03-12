@@ -1,5 +1,5 @@
 import { getContext, setContext, onMount, onDestroy } from 'svelte'
-import type Zdog from 'zdog'
+import Zdog from 'zdog'
 
 // Types
 // ================================
@@ -142,12 +142,4 @@ export { default as Rect } from '$lib/primitives/Rect.svelte'
 export { default as RoundedRect } from '$lib/primitives/RoundedRect.svelte'
 export { default as Shape } from '$lib/primitives/Shape.svelte'
 
-export {
-  default as Zdog,
-  TAU,
-  Vector,
-  easeInOut,
-  extend,
-  lerp,
-  modulo,
-} from 'zdog'
+export const { TAU, Vector, easeInOut, lerp, modulo } = Zdog
