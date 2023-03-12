@@ -4,8 +4,8 @@
 
   const mouth = '#e88'
   const skin = '#ffe0da'
-  const fg = '#ffb700'
-  const bg = '#444'
+  const fg = '#fbbf24'
+  const bg = '#44403c'
   const hipX = 3
   const armSize = 6
 </script>
@@ -211,7 +211,10 @@
     </div>
   </section>
 
-  <h3><small>by</small> <a href="https://carlos-aguilar.com">carlos-aguilar.com</a></h3>
+  <h3>
+    <small>by</small>
+    <a href="https://carlos-aguilar.com">carlos-aguilar.com</a>
+  </h3>
 </main>
 
 <style lang="postcss">

@@ -4,8 +4,8 @@
 
   const mouth = '#e88'
   const skin = '#ffe0da'
-  const fg = '#ffb700'
-  const bg = '#444'
+  const fg = '#fbbf24'
+  const bg = '#44403c'
   const hipX = 3
   const armSize = 6
 </script>
