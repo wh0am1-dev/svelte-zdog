@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths'
   import { Illustration, Ellipse, RoundedRect, Shape, TAU } from '$lib'
 
   const mouth = '#e88'
@@ -201,18 +202,16 @@
     <div>
       <h2 id="utils">utils</h2>
       <ul>
-        <li><a href="https://zzz.dog/api">Zdog</a></li>
         <li><a href="https://zzz.dog/api#utilities-tau">TAU</a></li>
         <li><a href="https://zzz.dog/api#vector">Vector</a></li>
         <li><a href="https://zzz.dog/api#utilities-easeinout">easeInOut</a></li>
-        <li><a href="https://zzz.dog/api#utilities-extend">extend</a></li>
         <li><a href="https://zzz.dog/api#utilities-lerp">lerp</a></li>
         <li><a href="https://zzz.dog/api#utilities-modulo">modulo</a></li>
       </ul>
     </div>
   </section>
 
-  <h3><small>by</small> <a href="/">carlos-aguilar.com</a></h3>
+  <h3><small>by</small> <a href={base}>carlos-aguilar.com</a></h3>
 </main>
 
 <style lang="postcss">

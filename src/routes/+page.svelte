@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from '$app/paths'
   import { Illustration, Ellipse, RoundedRect, Shape, TAU } from '$lib'
 
   const mouth = '#e88'
@@ -169,7 +170,7 @@
     svelte-zdog
   </h1>
 
-  <a href="/docs">docs</a>
+  <a href="{base}/docs">docs</a>
 </main>
 
 <style lang="postcss">
