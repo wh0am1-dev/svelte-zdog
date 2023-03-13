@@ -7,6 +7,10 @@
   let copied = false
 </script>
 
+<svelte:head>
+  <title>svelte-zdog · docs</title>
+</svelte:head>
+
 <main
   class="m-auto flex max-w-full flex-col items-center justify-center overflow-x-hidden py-16 px-4"
 >
