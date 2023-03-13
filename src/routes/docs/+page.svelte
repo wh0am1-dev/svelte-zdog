@@ -23,7 +23,7 @@
     />
   </a>
 
-  <div class="space" />
+  <div class="mt-16" />
   <h2>🛠 install</h2>
   <code
     class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
@@ -39,13 +39,13 @@
     copied to clipboard !
   </p>
 
-  <div class="space" />
+  <div class="mt-16" />
   <Eye />
   <h2>📐 build</h2>
   <EyeSnippet />
   <p class="mt-4">primitive components expose all primitive options as props</p>
 
-  <div class="space" />
+  <div class="mt-32" />
   <Animation />
   <h2>🎬 animate</h2>
   <AnimationSnippet />
@@ -54,7 +54,7 @@
     millis
   </p>
 
-  <div class="space" />
+  <div class="mt-32" />
   <h2>📦 pkg exports</h2>
   <section id="api" class="flex flex-row justify-center">
     <div class="column">
@@ -124,17 +124,13 @@
     </div>
   </section>
 
-  <span class="space relative">
+  <span class="relative mt-32">
     <small class="absolute -top-3 -left-3">by</small>
     <a href="https://carlos-aguilar.com">carlos-aguilar.com</a>
   </span>
 </main>
 
 <style lang="postcss">
-  .space {
-    @apply mt-32;
-  }
-
   .column {
     @apply mx-8 flex flex-col items-start;
   }
