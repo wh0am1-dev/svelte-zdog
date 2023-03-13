@@ -5,6 +5,7 @@
   import Animation from '../../demos/Animation.svelte'
   import AnimationSnippet from '../../snippets/AnimationSnippet.svelte'
   let copied = false
+  let copiedTimeout: number
 </script>
 
 <svelte:head>
@@ -34,7 +35,8 @@
     on:mousedown={e => {
       navigator.clipboard.writeText(e.currentTarget.innerText)
       copied = true
-      setTimeout(() => (copied = false), 2000)
+      clearTimeout(copiedTimeout)
+      copiedTimeout = setTimeout(() => (copied = false), 2000)
     }}
   >
     npm i svelte-zdog
