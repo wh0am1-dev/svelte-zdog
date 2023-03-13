@@ -1,53 +1,92 @@
 <script lang="ts">
-  import Guy from '$lib/docs/Guy.svelte'
+  import Guy from '../../demos/Guy.svelte'
+  import Eye from '../../demos/Eye.svelte'
+  import EyeSnippet from '../../snippets/EyeSnippet.svelte'
+  import Animation from '../../demos/Animation.svelte'
+  import AnimationSnippet from '../../snippets/AnimationSnippet.svelte'
+  let copied = false
 </script>
 
-<main id="top">
-  <section class="demo">
-    <Guy />
-  </section>
-
+<main
+  class="m-auto flex max-w-full flex-col items-center justify-center overflow-x-hidden py-16 px-4"
+>
+  <Guy />
   <h1>svelte-zdog</h1>
-
   <p>svelte components for <a href="https://zzz.dog">zdog</a> 3D renders</p>
-
-  <a href="https://npm.im/svelte-zdog" class="npm">
+  <a
+    href="https://npm.im/svelte-zdog"
+    class="hover:-translate-y-0.5 hover:scale-105"
+  >
     <img
       alt="npm"
       src="https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square"
     />
   </a>
 
-  <section id="how-to">
-    <h2>add</h2>
-    <code
-      class="snippet"
-      on:mousedown={e =>
-        navigator.clipboard.writeText(e.currentTarget.innerText)}
-    >
-      npm i svelte-zdog
-    </code>
+  <div class="space" />
+  <h2>🛠 install</h2>
+  <code
+    class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
+    on:mousedown={e => {
+      navigator.clipboard.writeText(e.currentTarget.innerText)
+      copied = true
+      setTimeout(() => (copied = false), 2000)
+    }}
+  >
+    npm i svelte-zdog
+  </code>
+  <p class="opacity-0 transition" class:opacity-100={copied}>
+    copied to clipboard !
+  </p>
 
-    <h2>use</h2>
-    <code class="snippet">
-      <pre>&lt;script&gt;
-  import &#123; Illustration, Ellipse &#125; from 'svelte-zdog'
-&lt;/script&gt;
+  <div class="space" />
+  <Eye />
+  <h2>📐 build</h2>
+  <EyeSnippet />
+  <p class="mt-4">primitive components expose all primitive options as props</p>
 
-&lt;Illustration width=&#123;240&#125; height=&#123;240&#125; dragRotate&gt;
-  &lt;Ellipse diameter=&#123;80&#125; stroke=&#123;20&#125; color="#ffb700" /&gt;
-&lt;/Illustration&gt;
-</pre>
-    </code>
-  </section>
+  <div class="space" />
+  <Animation />
+  <h2>🎬 animate</h2>
+  <AnimationSnippet />
+  <p class="mt-4">
+    primitive components accept an update function, node is the primitive, ms is
+    millis
+  </p>
 
-  <section id="api">
+  <div class="space" />
+  <h2>📦 pkg exports</h2>
+  <section id="api" class="flex flex-row justify-center">
     <div class="column">
-      <h2>primitives</h2>
+      <h2>root</h2>
       <ul>
         <li>
           <a href="https://zzz.dog/api#illustration">Illustration</a>
         </li>
+      </ul>
+      <h2>utils</h2>
+      <ul>
+        <li>
+          <a href="https://zzz.dog/api#utilities-tau">TAU</a>
+        </li>
+        <li>
+          <a href="https://zzz.dog/api#vector">Vector</a>
+        </li>
+        <li>
+          <a href="https://zzz.dog/api#utilities-easeinout"> easeInOut </a>
+        </li>
+        <li>
+          <a href="https://zzz.dog/api#utilities-lerp">lerp</a>
+        </li>
+        <li>
+          <a href="https://zzz.dog/api#utilities-modulo">modulo</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <h2>nodes</h2>
+      <ul>
         <li>
           <a href="https://zzz.dog/api#anchor">Anchor</a>
         </li>
@@ -83,71 +122,21 @@
         </li>
       </ul>
     </div>
-
-    <div class="column">
-      <h2>utilities</h2>
-      <ul>
-        <li>
-          <a href="https://zzz.dog/api#utilities-tau">TAU</a>
-        </li>
-        <li>
-          <a href="https://zzz.dog/api#vector">Vector</a>
-        </li>
-        <li>
-          <a href="https://zzz.dog/api#utilities-easeinout"> easeInOut </a>
-        </li>
-        <li>
-          <a href="https://zzz.dog/api#utilities-lerp">lerp</a>
-        </li>
-        <li>
-          <a href="https://zzz.dog/api#utilities-modulo">modulo</a>
-        </li>
-      </ul>
-    </div>
   </section>
 
-  <span class="author">
-    <small class="by">by</small>
+  <span class="space relative">
+    <small class="absolute -top-3 -left-3">by</small>
     <a href="https://carlos-aguilar.com">carlos-aguilar.com</a>
   </span>
 </main>
 
 <style lang="postcss">
-  #top {
-    @apply m-auto w-full overflow-x-hidden py-8;
-    @apply flex flex-col items-center justify-center;
-  }
-
-  .demo {
-    @apply h-60 w-60;
-  }
-
-  .npm {
-    @apply hover:-translate-y-0.5 hover:scale-105;
-  }
-
-  #how-to {
-    @apply my-8 flex flex-col items-center justify-center;
-  }
-
-  #api {
-    @apply flex flex-row justify-center;
+  .space {
+    @apply mt-32;
   }
 
   .column {
     @apply mx-8 flex flex-col items-start;
-  }
-
-  .author {
-    @apply relative mt-16;
-  }
-
-  .by {
-    @apply absolute -top-3 -left-3;
-  }
-
-  .snippet {
-    @apply max-w-full select-all rounded px-4 py-2 font-bold ring-2 ring-amber-400;
   }
 
   li {

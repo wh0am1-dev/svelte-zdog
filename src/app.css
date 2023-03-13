@@ -20,7 +20,7 @@
   }
 
   p {
-    @apply my-2 text-base;
+    @apply my-2 text-center text-base;
   }
 
   a {
