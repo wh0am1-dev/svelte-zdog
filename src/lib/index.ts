@@ -1,74 +1,13 @@
 import { getContext, setContext, onMount, onDestroy } from 'svelte'
 import Zdog from 'zdog'
-
-// Types
-// ================================
-
-/** Zdog primitive */
-export type Primitive =
-  | Zdog.Anchor
-  | Zdog.Box
-  | Zdog.Cone
-  | Zdog.Cylinder
-  | Zdog.Ellipse
-  | Zdog.Group
-  | Zdog.Hemisphere
-  | Zdog.Polygon
-  | Zdog.Rect
-  | Zdog.RoundedRect
-  | Zdog.Shape
-
-/** Zdog primitive options */
-export type PrimitiveOptions<P extends Primitive> = P extends Zdog.Box
-  ? Zdog.BoxOptions
-  : P extends Zdog.Cone
-  ? Zdog.ConeOptions
-  : P extends Zdog.Hemisphere
-  ? Zdog.HemisphereOptions
-  : P extends Zdog.Cylinder
-  ? Zdog.CylinderOptions
-  : P extends Zdog.Ellipse
-  ? Zdog.EllipseOptions
-  : P extends Zdog.RoundedRect
-  ? Zdog.RoundedRectOptions
-  : P extends Zdog.Rect
-  ? Zdog.RectOptions
-  : P extends Zdog.Polygon
-  ? Zdog.PolygonOptions
-  : P extends Zdog.Shape
-  ? Zdog.ShapeOptions
-  : P extends Zdog.Group
-  ? Zdog.GroupOptions
-  : P extends Zdog.Anchor
-  ? Zdog.AnchorOptions
-  : never
-
-/** Zdog primitive constructor */
-export type PrimitiveConstructor<P extends Primitive> = {
-  new (o: PrimitiveOptions<P>): P
-}
-
-/** Zdog primitive props */
-export type PrimitiveProps<P extends Primitive> = PrimitiveOptions<P> & {
-  update?: Subscriber<P>
-}
-
-/** Update subscription registrant */
-export type Subscriber<P extends Primitive> = (p: P) => Subscription
-/** Lifecycle subscription */
-export type Subscription = (ms: number) => void
-/** Subscription destructor */
-export type Destructor = () => void
-
-/** Zdog context */
-export interface ZdogContext {
-  /** Root anchor of the scene */
-  scene: Zdog.Anchor
-  /** List of update subscriptions */
-  subscribers: Array<Subscription>
-  /** Subscribe new update function */
-  subscribe: (fn: Subscription) => Destructor
-}
+import type {
+  ZdogContext,
+  Subscription,
+  Primitive,
+  PrimitiveOptions,
+  PrimitiveConstructor,
+  PrimitiveProps,
+} from './types'
 
 // Root context
 // ================================
