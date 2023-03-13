@@ -570,6 +570,12 @@ video {
 .-mt-4 {
   margin-top: -1rem;
 }
+.mt-16 {
+  margin-top: 4rem;
+}
+.mt-32 {
+  margin-top: 8rem;
+}
 .mt-4 {
   margin-top: 1rem;
 }
