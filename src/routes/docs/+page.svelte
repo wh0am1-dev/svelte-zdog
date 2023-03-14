@@ -129,7 +129,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 98 96"
-      class="fill-stone-100 transition hover:fill-amber-400"
+      class="fill-stone-100 hover:fill-amber-400"
     >
       <path
         fill-rule="evenodd"
@@ -141,6 +141,7 @@
   <a href="https://npm.im/svelte-zdog" class="mt-4">
     <img
       alt="npm"
+      class="rounded-full p-0.5 ring-amber-400 hover:ring-2"
       src="https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square"
     />
   </a>
