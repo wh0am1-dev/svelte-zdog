@@ -7,6 +7,60 @@
   src: url('/svelte-zdog/_app/immutable/assets/outfit-latin-400-normal.146664f5.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/outfit-all-400-normal.ceeb3ba7.woff') format('woff');
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
+/* fira-code-cyrillic-ext-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-cyrillic-ext-400-normal.aeaf7f0a.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+/* fira-code-cyrillic-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-cyrillic-400-normal.dac6dde5.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+/* fira-code-greek-ext-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-greek-ext-400-normal.9abd2774.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+1F00-1FFF;
+}
+/* fira-code-greek-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-greek-400-normal.ab9177a1.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+0370-03FF;
+}
+/* fira-code-latin-ext-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-latin-ext-400-normal.5e162e63.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+/* fira-code-latin-400-normal*/
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('/svelte-zdog/_app/immutable/assets/fira-code-latin-400-normal.2b407eb4.woff2') format('woff2'), url('/svelte-zdog/_app/immutable/assets/fira-code-all-400-normal.80245a18.woff') format('woff');
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
 /*
 ! tailwindcss v3.2.7 | MIT License | https://tailwindcss.com
 *//*
@@ -118,7 +172,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-family: Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -433,11 +487,6 @@ video {
   padding-right: 0.25rem;
   --tw-text-opacity: 1;
   color: rgb(251 191 36 / var(--tw-text-opacity));
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
 }
 
   a:hover {
@@ -453,6 +502,10 @@ video {
 
   a:has(> img, > svg):hover {
   background-color: transparent;
+}
+
+  code {
+  font-family: Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 *, ::before, ::after {
@@ -576,20 +629,14 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-8 {
-  margin-top: 2rem;
-}
 .flex {
   display: flex;
-}
-.h-12 {
-  height: 3rem;
 }
 .min-h-screen {
   min-height: 100vh;
 }
-.w-12 {
-  width: 3rem;
+.w-16 {
+  width: 4rem;
 }
 .w-full {
   width: 100%;
@@ -693,19 +740,6 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-.hover\:-translate-y-0:hover {
-  --tw-translate-y: -0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.hover\:-translate-y-0\.5:hover {
-  --tw-translate-y: -0.125rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .hover\:bg-amber-400:hover {
   --tw-bg-opacity: 1;
