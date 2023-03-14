@@ -504,9 +504,25 @@ video {
   background-color: transparent;
 }
 
+  ul {
+  list-style-type: disc;
+}
+
+  ul *::marker {
+  color: rgb(245 245 244 );
+}
+
+  ul::marker {
+  color: rgb(245 245 244 );
+}
+
   code {
   font-family: Fira Code, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
+
+  .min-h-mobile {
+    min-height: 90vh;
+  }
 
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
@@ -632,8 +648,8 @@ video {
 .flex {
   display: flex;
 }
-.min-h-screen {
-  min-height: 100vh;
+.contents {
+  display: contents;
 }
 .w-16 {
   width: 4rem;
