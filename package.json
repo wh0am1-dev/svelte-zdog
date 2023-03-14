@@ -2,7 +2,20 @@
   "name": "svelte-zdog",
   "version": "0.2.0",
   "license": "MIT",
+  "homepage": "https://carlos-aguilar.com/svelte-zdog",
   "description": "svelte components for zdog 3D renders",
+  "author": {
+    "name": "Carlos Aguilar",
+    "email": "hey@carlos-aguilar.com",
+    "url": "https://carlos-aguilar.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wh0am1-dev/svelte-zdog"
+  },
+  "bugs": {
+    "url": "https://github.com/wh0am1-dev/svelte-zdog/issues"
+  },
   "keywords": [
     "svelte",
     "components",
@@ -11,19 +24,6 @@
     "canvas",
     "svg"
   ],
-  "author": {
-    "name": "Carlos Aguilar",
-    "email": "hey@carlos-aguilar.com",
-    "url": "https://carlos-aguilar.com"
-  },
-  "homepage": "https://carlos-aguilar.com/svelte-zdog",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wh0am1-dev/svelte-zdog"
-  },
-  "bugs": {
-    "url": "https://github.com/wh0am1-dev/svelte-zdog/issues"
-  },
   "type": "module",
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
