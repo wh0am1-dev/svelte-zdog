@@ -19,7 +19,7 @@
   <h1>svelte-zdog</h1>
   <p>svelte components for <a href="https://zzz.dog">zdog</a> 3D renders</p>
 
-  <div class="mt-16" />
+  <div class="mt-32" />
   <h2>🧰 install</h2>
   <code
     class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
@@ -36,7 +36,7 @@
     copied to clipboard !
   </p>
 
-  <div class="mt-16" />
+  <div class="mt-32" />
   <Eye />
   <h2>📐 create</h2>
   <EyeSnippet />
@@ -138,7 +138,7 @@
       />
     </svg>
   </a>
-  <a href="https://npm.im/svelte-zdog" class="mt-4">
+  <a href="https://npm.im/svelte-zdog" target="_blank" class="mt-4">
     <img
       alt="npm"
       class="rounded-full p-0.5 ring-amber-400 hover:ring-2"
@@ -148,7 +148,7 @@
 
   <span class="relative mt-16">
     <small class="absolute -top-3 -left-3">by</small>
-    <a href="https://carlos-aguilar.com">carlos-aguilar.com</a>
+    <a href="https://carlos-aguilar.com" target="_blank">carlos-aguilar.com</a>
   </span>
 </main>
 
