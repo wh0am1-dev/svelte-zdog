@@ -20,13 +20,13 @@
   <p>svelte components for <a href="https://zzz.dog">zdog</a> 3D renders</p>
 
   <div class="mt-16" />
-  <h2>🛠 install</h2>
+  <h2>🧰 install</h2>
   <code
     class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
     on:mousedown={e => {
       navigator.clipboard.writeText(e.currentTarget.innerText)
       copied = true
-      clearTimeout(copiedTimeout)
+      if (copiedTimeout !== undefined) clearTimeout(copiedTimeout)
       copiedTimeout = setTimeout(() => (copied = false), 2000)
     }}
   >
@@ -35,19 +35,10 @@
   <p class="opacity-0 transition" class:opacity-100={copied}>
     copied to clipboard !
   </p>
-  <a
-    href="https://npm.im/svelte-zdog"
-    class="hover:-translate-y-0.5 hover:scale-105"
-  >
-    <img
-      alt="npm"
-      src="https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square"
-    />
-  </a>
 
   <div class="mt-16" />
   <Eye />
-  <h2>📐 build</h2>
+  <h2>📐 create</h2>
   <EyeSnippet />
   <p class="mt-4">primitive components expose all primitive options as props</p>
 
@@ -133,7 +124,7 @@
   <a
     href="https://github.com/wh0am1-dev/svelte-zdog"
     target="_blank"
-    class="mt-32 h-12 w-12"
+    class="mt-32 w-16"
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -147,8 +138,14 @@
       />
     </svg>
   </a>
+  <a href="https://npm.im/svelte-zdog" class="mt-4">
+    <img
+      alt="npm"
+      src="https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square"
+    />
+  </a>
 
-  <span class="relative mt-8">
+  <span class="relative mt-16">
     <small class="absolute -top-3 -left-3">by</small>
     <a href="https://carlos-aguilar.com">carlos-aguilar.com</a>
   </span>

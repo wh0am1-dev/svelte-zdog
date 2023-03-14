@@ -1,0 +1,18 @@
+{
+  "id": "/svelte-zdog",
+  "short_name": "svelte-zdog",
+  "name": "svelte-zdog",
+  "description": "svelte components for zdog 3D renders",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "theme_color": "#fbbf24",
+  "background_color": "#1c1917",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "16x16 32x32 48x48 256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

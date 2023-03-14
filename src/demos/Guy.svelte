@@ -7,6 +7,8 @@
   const bg = '#44403c'
   const hipX = 3
   const armSize = 6
+
+  let rotate = true
 </script>
 
 <Illustration
@@ -16,8 +18,10 @@
   zoom={5}
   dragRotate
   rotate={{ y: -TAU / 8 }}
+  onDragStart={() => (rotate = false)}
+  onDragEnd={() => (rotate = true)}
   update={scene => ms => {
-    scene.rotate.y += 0.005
+    if (rotate) scene.rotate.y += 0.005
   }}
 >
   <!-- hips -->

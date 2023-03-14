@@ -1,6 +1,6 @@
 <div align="center">
 
-[![svelte-zdog](static/img/header-alpha.png)](https://carlos-aguilar.com/svelte-zdog)
+[![svelte-zdog](static/cover.png)](https://carlos-aguilar.com/svelte-zdog)
 
 [![npm](https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square)](https://npm.im/svelte-zdog)
 

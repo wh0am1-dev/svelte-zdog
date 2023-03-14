@@ -5,7 +5,10 @@ module.exports = {
   content: ['./src/**/*.{html,js,ts,svelte}'],
   theme: {
     extend: {
-      fontFamily: {sans: ['Outfit', ...theme.fontFamily.sans]}
+      fontFamily: {
+        sans: ['Outfit', ...theme.fontFamily.sans],
+        mono: ['Fira Code', ...theme.fontFamily.mono],
+      },
     },
   },
   plugins: [],

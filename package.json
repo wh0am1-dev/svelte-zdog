@@ -67,6 +67,7 @@
     "svelte": "^3.54.0"
   },
   "devDependencies": {
+    "@fontsource/fira-code": "^4.5.13",
     "@fontsource/outfit": "^4.5.11",
     "@sveltejs/adapter-static": "^2.0.1",
     "@sveltejs/kit": "^1.5.0",
