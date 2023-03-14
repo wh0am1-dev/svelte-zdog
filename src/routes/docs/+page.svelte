@@ -37,18 +37,22 @@
   </p>
 
   <div class="mt-32" />
-  <Eye />
   <h2>📐 create</h2>
+  <Eye />
   <EyeSnippet />
-  <p class="mt-4">primitive components expose all primitive options as props</p>
+  <p class="mt-4">
+    build using declarative tree-like structs,<br />
+    components expose all primitive options as props
+  </p>
 
   <div class="mt-32" />
-  <Animation />
   <h2>🎬 animate</h2>
+  <Animation />
   <AnimationSnippet />
   <p class="mt-4">
-    primitive components accept an update function, node is the primitive, ms is
-    millis
+    components accept an update function<br />
+    <span class="text-amber-400">node</span> → primitive reference<br />
+    <span class="text-amber-400">delta</span> → ms since last frame
   </p>
 
   <div class="mt-32" />
@@ -155,9 +159,5 @@
 <style lang="postcss">
   .column {
     @apply mx-8 flex flex-col items-start;
-  }
-
-  li {
-    @apply list-disc;
   }
 </style>

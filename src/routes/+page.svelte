@@ -4,7 +4,7 @@
 </script>
 
 <main
-  class="m-auto flex min-h-screen w-full flex-col items-center justify-center overflow-hidden"
+  class="min-h-mobile m-auto flex w-full flex-col items-center justify-center overflow-hidden"
 >
   <Guy />
 

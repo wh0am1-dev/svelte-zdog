@@ -7,7 +7,6 @@
     >, <span class="sky">Ellipse</span>, <span class="sky">TAU</span
     > &#125; <span class="red">from</span> '<span class="lime">svelte-zdog</span
     >'
-
   <span class="red">let</span> <span class="sky">rotate</span> <span
       class="emerald">=</span
     > <span class="purple">true</span>
@@ -30,17 +29,23 @@
     >)&#125;
   <span class="amber">update</span>=&#123;<span class="sky">node</span> <span
       class="emerald">=&gt;</span
-    > <span class="sky">ms</span> <span class="emerald">=&gt;</span> &#123;
+    > <span class="sky">delta</span> <span class="emerald">=&gt;</span> &#123;
     <span class="red">if</span> (<span class="sky">rotate</span>) &#123;
       <span class="sky">node</span>.<span class="sky">rotate</span>.<span
       class="sky">x</span
-    > <span class="emerald">+=</span> <span class="purple">0.01</span>
+    > <span class="emerald">+=</span> <span class="sky">delta</span> <span
+      class="emerald">/</span
+    > <span class="purple">800</span>
       <span class="sky">node</span>.<span class="sky">rotate</span>.<span
       class="sky">y</span
-    > <span class="emerald">+=</span> <span class="purple">0.005</span>
+    > <span class="emerald">+=</span> <span class="sky">delta</span> <span
+      class="emerald">/</span
+    > <span class="purple">1600</span>
       <span class="sky">node</span>.<span class="sky">rotate</span>.<span
       class="sky">z</span
-    > <span class="emerald">+=</span> <span class="purple">0.0025</span>
+    > <span class="emerald">+=</span> <span class="sky">delta</span> <span
+      class="emerald">/</span
+    > <span class="purple">2400</span>
     &#125;
   &#125;&#125;
 <span class="sky">&gt;</span>

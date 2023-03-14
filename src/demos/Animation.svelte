@@ -1,6 +1,5 @@
 <script>
   import { Illustration, Ellipse, TAU } from '$lib'
-
   let rotate = true
 </script>
 
@@ -11,11 +10,11 @@
   dragRotate
   onDragStart={() => (rotate = false)}
   onDragEnd={() => (rotate = true)}
-  update={node => ms => {
+  update={node => delta => {
     if (rotate) {
-      node.rotate.x += 0.01
-      node.rotate.y += 0.005
-      node.rotate.z += 0.0025
+      node.rotate.x += delta / 800
+      node.rotate.y += delta / 1600
+      node.rotate.z += delta / 2400
     }
   }}
 >

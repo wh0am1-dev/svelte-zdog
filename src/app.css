@@ -31,7 +31,15 @@
     @apply p-0 hover:bg-transparent;
   }
 
+  ul {
+    @apply list-disc marker:text-stone-100;
+  }
+
   code {
     @apply font-mono;
+  }
+
+  .min-h-mobile {
+    min-height: 90vh;
   }
 }

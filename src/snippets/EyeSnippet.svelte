@@ -11,7 +11,8 @@
       class="sky">&gt;</span
     >
 
-<span class="sky">&lt;</span>Illustration <span class="amber">width</span
+<span class="sky">&lt;</span>Illustration <span class="amber">element</span
+    >="<span class="lime">svg</span>" <span class="amber">width</span
     >=&#123;<span class="purple">240</span>&#125; <span class="amber"
       >height</span
     >=&#123;<span class="purple">240</span>&#125; <span class="amber"
