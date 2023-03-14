@@ -52,7 +52,7 @@ export type PrimitiveProps<P extends Primitive> = PrimitiveOptions<P> & {
 /** Update subscription registrant */
 export type Subscriber<P extends Primitive> = (p: P) => Subscription
 /** Lifecycle subscription */
-export type Subscription = (ms: number) => void
+export type Subscription = (delta: number) => void
 /** Subscription destructor */
 export type Destructor = () => void
 

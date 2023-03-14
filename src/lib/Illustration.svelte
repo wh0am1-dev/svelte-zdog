@@ -18,7 +18,7 @@
 
   export let width: number
   export let height: number
-  export let className: string = ''
+  export let className = ''
   export let element: ZdogElement = 'canvas'
   export let update: Subscriber<Zdog.Anchor> = () => () => void 0
   export let onResize: OnResize = () => void 0
@@ -27,6 +27,7 @@
   export let onDragMove: OnDragMove = () => void 0
   export let onDragEnd: OnDragEnd = () => void 0
 
+  let illu: Zdog.Illustration
   let canvas: SVGSVGElement | HTMLCanvasElement
   const ctx: ZdogContext = {
     scene: new Zdog.Anchor(),
@@ -38,7 +39,7 @@
           (ctx.subscribers = ctx.subscribers.filter(sub => sub !== fn))
       }
 
-      return () => {}
+      return () => void 0
     },
   }
 
@@ -46,22 +47,22 @@
   setParent(ctx.scene)
 
   onMount(() => {
-    const illu = new Zdog.Illustration({
+    illu = new Zdog.Illustration({
       ...$$restProps,
       element: canvas,
-      onResize: function (w, h) {
+      onResize(w, h) {
         onResize(this, w, h)
       },
-      onPrerender: function (context) {
+      onPrerender(context) {
         onPrerender(this, context)
       },
-      onDragStart: function (pointer) {
+      onDragStart(pointer) {
         onDragStart(this, pointer)
       },
-      onDragMove: function (pointer, moveX, moveY) {
+      onDragMove(pointer, moveX, moveY) {
         onDragMove(this, pointer, moveX, moveY)
       },
-      onDragEnd: function () {
+      onDragEnd() {
         onDragEnd(this)
       },
     })
@@ -69,12 +70,14 @@
     illu.addChild(ctx.scene)
     illu.updateGraph()
 
+    let last = 0
     let frame: number
     let unsubscribe = ctx.subscribe(update(ctx.scene))
     const render = (ms = 0) => {
-      ctx.subscribers.forEach(fn => fn(ms))
+      ctx.subscribers.forEach(fn => fn(ms - last))
       illu.updateRenderGraph()
       frame = requestAnimationFrame(render)
+      last = ms
     }
 
     render()
