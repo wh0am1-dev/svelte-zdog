@@ -26,19 +26,19 @@
       >height</span
     >=&#123;<span class="purple">100</span>&#125; <span class="amber"
       >color</span
-    >="<span class="lime">#f5f5f4</span>" <span class="amber">fill</span><span
-      class="sky"> /&gt;</span
-    >
+    >="<span class="lime">#f5f5f4</span>" <span class="amber">stroke</span
+    >=&#123;<span class="purple">10</span>&#125; <span class="amber">fill</span
+    ><span class="sky"> /&gt;</span>
     <span class="sky">&lt;</span>Ellipse <span class="amber">diameter</span
     >=&#123;<span class="purple">80</span>&#125; <span class="amber">color</span
-    >="<span class="lime">#fbbf24</span>" <span class="amber">fill</span><span
-      class="sky"> /&gt;</span
-    >
+    >="<span class="lime">#fbbf24</span>" <span class="amber">stroke</span
+    >=&#123;<span class="purple">10</span>&#125; <span class="amber">fill</span
+    ><span class="sky"> /&gt;</span>
     <span class="sky">&lt;</span>Ellipse <span class="amber">diameter</span
     >=&#123;<span class="purple">40</span>&#125; <span class="amber">color</span
-    >="<span class="lime">#1c1917</span>" <span class="amber">fill</span><span
-      class="sky"> /&gt;</span
-    >
+    >="<span class="lime">#1c1917</span>" <span class="amber">stroke</span
+    >=&#123;<span class="purple">10</span>&#125; <span class="amber">fill</span
+    ><span class="sky"> /&gt;</span>
     <span class="sky">&lt;</span>Ellipse
       <span class="amber">translate</span>=&#123;&#123; x: <span class="purple"
       >20</span
@@ -47,9 +47,10 @@
       <span class="amber">diameter</span>=&#123;<span class="purple">30</span
     >&#125;
       <span class="amber">color</span>="<span class="lime">#f5f5f4</span>"
-      <span class="amber">fill</span><span class="sky">
-    /&gt;</span
-    >
+      <span class="amber">stroke</span>=&#123;<span class="purple">10</span
+    >&#125;
+      <span class="amber">fill</span>
+    <span class="sky">/&gt;</span>
   <span class="sky">&lt;/</span>Group<span class="sky">&gt;</span>
 <span class="sky">&lt;/</span>Illustration<span class="sky">&gt;</span>
 </code></pre>
