@@ -695,6 +695,12 @@ video {
 .rounded-full {
   border-radius: 9999px;
 }
+.rounded-bl-2xl {
+  border-bottom-left-radius: 1rem;
+}
+.rounded-tr-2xl {
+  border-top-right-radius: 1rem;
+}
 .fill-stone-100 {
   fill: #f5f5f4;
 }
