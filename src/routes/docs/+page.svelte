@@ -1,11 +1,14 @@
 <script lang="ts">
-  import Guy from '../../demos/Guy.svelte'
-  import Eye from '../../demos/Eye.svelte'
-  import EyeSnippet from '../../snippets/EyeSnippet.svelte'
-  import Animation from '../../demos/Animation.svelte'
-  import AnimationSnippet from '../../snippets/AnimationSnippet.svelte'
+  import { assets } from '$app/paths'
+  import Guy from '../../components/Guy.svelte'
+  import Eye from '../../components/Eye.svelte'
+  import EyeSnippet from '../../components/EyeSnippet.svelte'
+  import Animation from '../../components/Animation.svelte'
+  import AnimationSnippet from '../../components/AnimationSnippet.svelte'
+  import NotByAi from '../../components/NotByAI.svelte'
   let copied = false
   let copiedTimeout: number
+  let notByAI = false
 </script>
 
 <svelte:head>
@@ -19,8 +22,7 @@
   <h1>svelte-zdog</h1>
   <p>svelte components for <a href="https://zzz.dog">zdog</a> 3D renders</p>
 
-  <div class="mt-32" />
-  <h2>🧰 install</h2>
+  <h2 class="mt-32">🧰 install</h2>
   <code
     class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
     on:mousedown={e => {
@@ -36,8 +38,7 @@
     copied to clipboard !
   </p>
 
-  <div class="mt-32" />
-  <h2>📐 create</h2>
+  <h2 class="mt-32">📐 create</h2>
   <Eye />
   <EyeSnippet />
   <p class="mt-4">
@@ -45,8 +46,7 @@
     components expose all primitive options as props
   </p>
 
-  <div class="mt-32" />
-  <h2>🎬 animate</h2>
+  <h2 class="mt-32">🎬 animate</h2>
   <Animation />
   <AnimationSnippet />
   <p class="mt-4">
@@ -55,8 +55,7 @@
     <span class="text-amber-400">delta</span> → ms since last frame
   </p>
 
-  <div class="mt-32" />
-  <h2>📦 pkg exports</h2>
+  <h2 class="mt-32">📦 pkg exports</h2>
   <section id="api" class="flex flex-row justify-center">
     <div class="column">
       <h2>root</h2>
@@ -84,7 +83,6 @@
         </li>
       </ul>
     </div>
-
     <div class="column">
       <h2>nodes</h2>
       <ul>
@@ -133,7 +131,7 @@
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 98 96"
-      class="fill-stone-100 hover:fill-amber-400"
+      class="rounded-full fill-stone-100 p-0.5 hover:fill-amber-400"
     >
       <path
         fill-rule="evenodd"
@@ -145,10 +143,11 @@
   <a href="https://npm.im/svelte-zdog" target="_blank" class="mt-4">
     <img
       alt="npm"
-      class="rounded-full p-0.5 ring-amber-400 hover:ring-2"
+      class="rounded-full ring-amber-400 hover:ring-2"
       src="https://img.shields.io/npm/v/svelte-zdog?logo=npm&style=flat-square"
     />
   </a>
+  <NotByAi className="mt-4" />
 
   <span class="relative mt-16">
     <small class="absolute -top-3 -left-3">by</small>

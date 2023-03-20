@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import Guy from '../demos/Guy.svelte'
+  import Guy from '../components/Guy.svelte'
 </script>
 
 <main
