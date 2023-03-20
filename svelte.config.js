@@ -10,6 +10,7 @@ const config = {
     adapter: adapter(),
     paths: {
       base: dev ? '' : '/svelte-zdog',
+      relative: false,
     },
   },
 }
