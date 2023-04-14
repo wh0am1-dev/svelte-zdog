@@ -20,8 +20,8 @@
   rotate={{ y: -TAU / 8 }}
   onDragStart={() => (rotate = false)}
   onDragEnd={() => (rotate = true)}
-  update={scene => ms => {
-    if (rotate) scene.rotate.y += 0.005
+  update={scene => delta => {
+    if (rotate) scene.rotate.y += delta / 2000
   }}
 >
   <!-- hips -->

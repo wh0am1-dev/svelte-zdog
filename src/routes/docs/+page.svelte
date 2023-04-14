@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { assets } from '$app/paths'
   import Guy from '../../components/Guy.svelte'
   import Eye from '../../components/Eye.svelte'
   import EyeSnippet from '../../components/EyeSnippet.svelte'
@@ -8,7 +7,6 @@
   import NotByAi from '../../components/NotByAI.svelte'
   let copied = false
   let copiedTimeout: number
-  let notByAI = false
 </script>
 
 <svelte:head>
@@ -24,7 +22,7 @@
 
   <h2 class="mt-32">🧰 install</h2>
   <code
-    class="select-all rounded px-4 py-2 ring-2 ring-amber-400"
+    class="cursor-pointer select-all rounded px-4 py-2 ring-2 ring-amber-400"
     on:mousedown={e => {
       navigator.clipboard.writeText(e.currentTarget.innerText)
       copied = true
