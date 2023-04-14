@@ -645,6 +645,9 @@ video {
 .mt-4 {
   margin-top: 1rem;
 }
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
@@ -659,6 +662,9 @@ video {
 }
 .max-w-full {
   max-width: 100%;
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .select-all {
   -webkit-user-select: all;
@@ -775,6 +781,10 @@ video {
 .hover\:bg-amber-400:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
+}
+.hover\:bg-stone-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity));
 }
 .hover\:fill-amber-400:hover {
   fill: #fbbf24;
