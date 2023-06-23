@@ -1,12 +1,13 @@
 <script lang="ts">
-  export let className = ''
+  let className = ''
+  export { className as class }
   let hover = false
 </script>
 
 <a
   href="https://notbyai.fyi"
   target="_blank"
-  class="{className} rounded-tr-2xl rounded-bl-2xl p-0.5"
+  class="{className} rounded-bl-2xl rounded-tr-2xl p-0.5"
   on:mouseenter={() => (hover = true)}
   on:mouseleave={() => (hover = false)}
 >

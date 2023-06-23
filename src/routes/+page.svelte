@@ -1,9 +1,9 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import Castle from '../components/castle/Castle.svelte'
-  import Guy from '../components/Guy.svelte'
-  import Eye from '../components/Eye.svelte'
-  import Animation from '../components/Animation.svelte'
+  import Castle from '../components/scenes/castle/Castle.svelte'
+  import Guy from '../components/scenes/Guy.svelte'
+  import Eye from '../components/scenes/Eye.svelte'
+  import Animation from '../components/scenes/Animation.svelte'
 
   const sketches = [Castle, Guy, Eye, Animation]
 

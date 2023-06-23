@@ -7,7 +7,7 @@
 </script>
 
 <Illustration
-  element="svg"
+  element="canvas"
   width={240}
   height={240}
   {zoom}

@@ -1,5 +1,10 @@
+<script lang="ts">
+  let className = ''
+  export { className as class }
+</script>
+
 <pre
-  class="mt-4 max-w-full overflow-x-auto rounded px-4 py-2 text-stone-300 ring-1 ring-stone-700"><code
+  class="{className} max-w-full overflow-x-auto rounded px-4 py-2 text-stone-300 ring-1 ring-stone-700"><code
     ><span class="sky">&lt;</span><span class="emerald">script</span><span
       class="sky">&gt;</span
     >
