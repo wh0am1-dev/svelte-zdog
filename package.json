@@ -1,6 +1,6 @@
 {
   "name": "svelte-zdog",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "MIT",
   "homepage": "https://carlos-aguilar.com/svelte-zdog",
   "description": "svelte components for zdog 3D renders",
