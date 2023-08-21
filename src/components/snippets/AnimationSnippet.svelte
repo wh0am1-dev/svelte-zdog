@@ -34,7 +34,9 @@
     >)&#125;
   <span class="amber">update</span>=&#123;<span class="sky">node</span> <span
       class="emerald">=&gt;</span
-    > <span class="sky">delta</span> <span class="emerald">=&gt;</span> &#123;
+    > (<span class="sky">delta</span>, <span class="sky">ms</span>) <span
+      class="emerald">=&gt;</span
+    > &#123;
     <span class="red">if</span> (<span class="sky">rotate</span>) &#123;
       <span class="sky">node</span>.<span class="sky">rotate</span>.<span
       class="sky">x</span

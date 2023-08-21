@@ -29,18 +29,22 @@
   <h2 class="mt-32">📐 create</h2>
   <Eye />
   <EyeSnippet class="mt-4" />
-  <p class="mt-4">
+  <p class="mt-8">
     build using declarative tree-like structs,<br />
-    components expose all primitive options as props
+    components expose all primitive options as props<br />
   </p>
 
   <h2 class="mt-32">🎬 animate</h2>
   <Animation />
   <AnimationSnippet class="mt-4" />
+  <p class="mt-8">
+    props are not reactive,<br />
+    components accept an <span class="text-amber-400">update</span> function
+  </p>
   <p class="mt-4">
-    components accept an update function<br />
-    <span class="text-amber-400">node</span> → primitive reference<br />
-    <span class="text-amber-400">delta</span> → ms since last frame
+    <span class="text-sky-400">node</span> → primitive reference<br />
+    <span class="text-sky-400">delta</span> → ms since last frame<br />
+    <span class="text-sky-400">ms</span> → total ms elapsed
   </p>
 
   <h2 class="mt-32">📦 pkg exports</h2>

@@ -75,7 +75,7 @@
     let frame: number
     let unsubscribe = ctx.subscribe(update(ctx.scene))
     const render = (ms = 0) => {
-      ctx.subscribers.forEach(fn => fn(ms - last))
+      ctx.subscribers.forEach(sub => sub(ms - last, ms))
       illu.updateRenderGraph()
       frame = requestAnimationFrame(render)
       last = ms
