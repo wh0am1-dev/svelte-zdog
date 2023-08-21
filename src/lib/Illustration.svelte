@@ -32,11 +32,12 @@
   const ctx: ZdogContext = {
     scene: new Zdog.Anchor(),
     subscribers: [],
-    subscribe: fn => {
-      if (typeof fn === 'function') {
-        ctx.subscribers.push(fn)
-        return () =>
-          (ctx.subscribers = ctx.subscribers.filter(sub => sub !== fn))
+    subscribe: sub => {
+      if (typeof sub === 'function') {
+        ctx.subscribers.push(sub)
+        return () => {
+          ctx.subscribers = ctx.subscribers.filter(s => s !== sub)
+        }
       }
 
       return () => void 0

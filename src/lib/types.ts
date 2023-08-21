@@ -41,7 +41,7 @@ export type PrimitiveOptions<P extends Primitive> = P extends Zdog.Box
 
 /** Zdog primitive constructor */
 export type PrimitiveConstructor<P extends Primitive> = {
-  new (o: PrimitiveOptions<P>): P
+  new (options: PrimitiveOptions<P>): P
 }
 
 /** Zdog primitive props */
@@ -50,7 +50,7 @@ export type PrimitiveProps<P extends Primitive> = PrimitiveOptions<P> & {
 }
 
 /** Update subscription registrant */
-export type Subscriber<P extends Primitive> = (p: P) => Subscription
+export type Subscriber<P extends Primitive> = (node: P) => Subscription
 /** Lifecycle subscription */
 export type Subscription = (delta: number) => void
 /** Subscription destructor */
@@ -63,7 +63,7 @@ export interface ZdogContext {
   /** List of update subscriptions */
   subscribers: Array<Subscription>
   /** Subscribe new update function */
-  subscribe: (fn?: Subscription) => Destructor
+  subscribe: (sub?: Subscription) => Destructor
 }
 
 /** Zdog element type */
@@ -71,26 +71,26 @@ export type ZdogElement = 'svg' | 'canvas'
 
 /** Illustration resize callback */
 export type OnResize = (
-  illu: Zdog.Illustration,
+  scene: Zdog.Illustration,
   width: number,
   height: number
 ) => void
 
 /** Illustration prerender callback */
 export type OnPrerender = (
-  illu: Zdog.Illustration,
+  scene: Zdog.Illustration,
   context: CanvasRenderingContext2D | SVGSVGElement
 ) => void
 
 /** Illustration drag start callback */
 export type OnDragStart = (
-  illu: Zdog.Dragger,
+  scene: Zdog.Dragger,
   pointer: Zdog.PointerPosition
 ) => void
 
 /** Illustration drag move callback */
 export type OnDragMove = (
-  illu: Zdog.Dragger,
+  scene: Zdog.Dragger,
   pointer: Zdog.PointerPosition,
   moveX: number,
   moveY: number
