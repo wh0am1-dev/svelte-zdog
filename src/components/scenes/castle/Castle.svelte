@@ -3,7 +3,7 @@
   import Wall from './Wall.svelte'
 
   const zoom = 12
-  let rotate = false
+  let rotate = true
 </script>
 
 <Illustration
