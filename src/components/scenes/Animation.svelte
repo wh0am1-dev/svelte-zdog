@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Illustration, Ellipse, TAU } from '$lib'
   let rotate = true
 </script>

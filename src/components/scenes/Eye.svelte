@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Illustration, Group, Ellipse } from '$lib'
 </script>
 
