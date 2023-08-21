@@ -2,10 +2,9 @@
   import { base } from '$app/paths'
   import Castle from '../components/scenes/castle/Castle.svelte'
   import Guy from '../components/scenes/Guy.svelte'
-  import Eye from '../components/scenes/Eye.svelte'
   import Animation from '../components/scenes/Animation.svelte'
 
-  const sketches = [Castle, Guy, Eye, Animation]
+  const sketches = [Guy, Castle, Animation]
 
   let pointer = 0
   $: selected = sketches[pointer]
